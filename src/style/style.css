@@ -1,0 +1,486 @@
+/* Reset start */
+:root {
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reset end */
+/*Layout start*/
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/*Layout end*/
+/*Variables start*/
+:root {
+  --gray: #343a40 ;
+  --gray-light: #adb5bd;
+  --green: #7cbd1e;
+  --green-hover: #517b14;
+  --white: #fff;
+  --black: #000;
+}
+
+/*Variables end*/
+/*Main start*/
+button {
+  cursor: pointer;
+  color: var(--white);
+  padding: 1.1rem 2rem;
+  background-color: var(--green);
+  border: none;
+}
+button:hover {
+  background-color: var(--green-hover);
+}
+button:nth-child(1) {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--green);
+}
+button:nth-child(1):hover {
+  background-color: var(--green);
+}
+button:nth-child(3) {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-color: var(--green);
+}
+button:nth-child(3):hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/*Header start*/
+header .contact-info {
+  padding: 1.5rem;
+}
+header .contact-info .logo {
+  font-size: 2rem;
+}
+header .contact-info .info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+header .contact-info .info p:nth-child(1) {
+  color: var(--gray-light);
+}
+header .contact-info .info li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+header .contact-info .info li i {
+  margin-right: 1.5rem;
+}
+header .menu {
+  padding: 2rem 0;
+  background-color: var(--gray);
+}
+header .menu ul {
+  display: flex;
+}
+header .menu ul li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  transition: color 0.6s;
+  padding: 10px 0;
+}
+header .menu ul li a,
+header .menu ul li i {
+  color: var(--gray-light);
+}
+header .menu ul li a:hover,
+header .menu ul li i:hover {
+  color: var(--white);
+}
+header .menu ul li:hover .dropdown {
+  visibility: visible;
+}
+header .menu ul .toggle-menu .dropdown {
+  width: 250px;
+  display: block;
+  position: absolute;
+  background-color: var(--white);
+  padding-left: 20px;
+  margin-top: 10px;
+  visibility: hidden;
+  border: 1px solid #000;
+}
+header .menu ul .toggle-menu .dropdown a {
+  color: var(--black);
+  transition: color 0.3s;
+}
+header .menu ul .toggle-menu .dropdown a:hover {
+  color: var(--green);
+}
+header .menu ul .toggle-menu .toggle-menu:hover .dropdown {
+  visibility: visible;
+}
+header .menu ul .toggle-menu .toggle-menu .dropdown {
+  top: 175px;
+  left: 100%;
+  visibility: hidden;
+}
+header .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+header .hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .hero .content {
+  position: absolute;
+  text-align: center;
+  z-index: 5;
+}
+header .hero .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/*Header end*/
+/*Host start*/
+#host {
+  padding: 70px 0;
+  text-align: center;
+}
+#host h2 {
+  font-size: 2rem;
+  color: var(--gray-light);
+}
+#host .init {
+  border: 1px solid var(--gray-light);
+  height: 400px;
+  transition: box-shadow 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px 0 0;
+}
+#host .init h4 {
+  margin: 10px 0;
+  color: var(--gray-light);
+}
+#host .init i {
+  color: var(--green);
+  transition: transform 0.6s;
+}
+#host .init:hover {
+  box-shadow: -1px 1px 16px 0px rgba(0, 0, 0, 0.75);
+}
+#host .init:hover i {
+  transform: rotate(360deg);
+}
+
+/*Host end*/
+/*Register start*/
+#register {
+  background-image: url(../images/hero_bg_3.jpg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 250px 0;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+#register ::after {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+#register .content {
+  z-index: 1;
+}
+#register .content h2 {
+  font-size: 4rem;
+}
+#register .content p {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+#register .content button {
+  background-color: var(--green);
+}
+#register .content button:hover {
+  border: 1px solid var(--green-hover);
+  background-color: var(--green-hover);
+}
+
+/*Register end*/
+/*Choose start*/
+#choose {
+  color: var(--gray-light);
+  padding: 40px 0;
+}
+#choose h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+#choose .content {
+  padding: 60px 20px;
+  border: 1px solid var(--gray-light);
+  height: 250px;
+  transition: background-color 0.6s;
+  margin: 20px 20px 0 0;
+}
+#choose .content .div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#choose .content .div i {
+  color: var(--green);
+  margin-right: 20px;
+  transition: transform 0.7s;
+}
+#choose .content .div h3 {
+  color: var(--black);
+}
+#choose .content:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+#choose .content:hover i,
+#choose .content:hover h3 {
+  color: var(--white);
+}
+#choose .content:hover i {
+  transform: rotate(360deg);
+}
+
+/*Choose end`*/
+/*Testimonial start*/
+#testimonial {
+  padding: 70px 0;
+  text-align: center;
+  line-height: 30px;
+}
+#testimonial img {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+#testimonial h2 {
+  color: var(--gray-light);
+}
+
+/*Testimonial end*/
+/*Main end*/
+/*Footer start*/
+footer {
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 60px 0;
+}
+footer li {
+  margin-top: 20px;
+  transition: transform 0.5s;
+}
+footer li a {
+  color: var(--gray-light);
+  transition: color 0.5s;
+}
+footer li a:hover {
+  color: var(--white);
+}
+footer li:hover {
+  transform: translateX(15px);
+}
+footer h3 {
+  margin-top: 15px;
+}
+footer h4 {
+  margin-top: 20px;
+  color: var(--gray-light);
+}
+footer p {
+  text-align: center;
+  color: var(--gray-light);
+  margin-top: 50px;
+}
+
+/*Footer end*/
+/*Responsive start*/
+/* Large Devices, Wide Screens */
+@media (max-width: 1920px) {
+  .col-1 {
+    width: 8.3333333333%;
+  }
+  .col-2 {
+    width: 16.6666666667%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.3333333333%;
+  }
+  .col-5 {
+    width: 41.6666666667%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.3333333333%;
+  }
+  .col-8 {
+    width: 66.6666666667%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.3333333333%;
+  }
+  .col-11 {
+    width: 91.6666666667%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+/* Medium Devices, Desktops */
+@media (max-width: 992px) {
+  .col-md-1 {
+    width: 8.3333333333%;
+  }
+  .col-md-2 {
+    width: 16.6666666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+  .col-md-5 {
+    width: 41.6666666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333333333%;
+  }
+  .col-md-8 {
+    width: 66.6666666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-9 .info p {
+    display: none;
+  }
+  .col-md-10 {
+    width: 83.3333333333%;
+  }
+  .col-md-11 {
+    width: 91.6666666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+/* Small Devices, Tablets */
+@media (max-width: 768px) {
+  .contact-info .container {
+    width: 100%;
+  }
+  .menu {
+    display: none;
+  }
+  .col-sm-1 {
+    width: 8.3333333333%;
+  }
+  .col-sm-2 {
+    width: 16.6666666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.3333333333%;
+  }
+  .col-sm-5 {
+    width: 41.6666666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.3333333333%;
+  }
+  .col-sm-8 {
+    width: 66.6666666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.3333333333%;
+  }
+  .col-sm-11 {
+    width: 91.6666666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*Responsive end*//*# sourceMappingURL=style.css.map */
